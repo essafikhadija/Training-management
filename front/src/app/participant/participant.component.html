@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="panel panel-primary spacer" >
+    <div class="panel-heading">Veuillez remplir le formulaire ci-dessous !</div>
+    <div class="panel-body">
+      <div>
+        <h3 class="h3-inscrire">Participant</h3>
+        <div id="participant" class="m10">
+          <select class="form-control" name="Civilite_Participant" style="margin:0px">
+            <option value="">Civilité</option>
+            <option value="Mr">Monsieur</option>
+            <option value="Mme">Madame</option>
+          </select>
+          <input  class="form-control" name="Prenom_Participant" id="prenomParticipant"  placeholder="Prénom*" type="text" value="" required="">
+          <input  class="form-control" name="Nom_Participant" id="nomParticipant" type="text" placeholder="Nom*" value="" required="">
+          <input  class="form-control" name="Date_Naissance_Participant" id="dateNaissanceParticipant" type="date" placeholder="Date de naissance*" value="" required="">
+          <input  class="form-control" name="Fonction_Participant" id="fonctionParticipant" type="text" placeholder="Fonction" value="" required="">
+          <input class="form-control"  name="Societe_Participant" type="text" placeholder="Société*" value="" required="">
+          <input  class="form-control" name="CodePostal_Participant" type="text" placeholder="Code postal*" value="" required="">
+          <input  class="form-control" name="Ville_Participant" type="text" placeholder="Ville*" value="" required="">
+          <input  class="form-control" name="Pays_Participant" type="text" placeholder="Pays*" id="pays" value="" required="">
+         <!-- <select class="form-control" name="Effectif_Societe_Participant" required="">
+            <option value="">Effectif société*</option>
+            <option value="- de 10 salaries">&lt; 10 salariés</option>
+            <option value="10-250 salaries">10-250 salariés</option>
+            <option value="+ de 250 salaries">&gt; 250 salariés</option>
+          </select>-->
+          <input  class="form-control" name="Telephone_Participant" type="text" placeholder="Tél*" value="" required="">
+          <input  class="form-control" name="Email_Participant" id="Email_Participant" type="text" data-confirm="Email_ParticipantBis" placeholder="E-mail *" value="" required="">
+          <textarea class="form-control" name="Commentaires_Participant" placeholder="Commentaires" rows="2"></textarea>
+
+        </div>
+
+        <h3 class="h3-inscrire" >Choix de la formation</h3>
+        <div>
+          <input  class="form-control" name="titre_formation" id="titreFormation"  placeholder="titre*" type="text" value="" required="">
+          <input  class="form-control" name="categorie_formation" id="categorieFormation"  placeholder="categorie*" type="text" value="" required="">
+          <input  class="form-control" name="date_formation" id="dateFormation"  placeholder="date souhaitée" type="date" value="" required="">
+          <input  class="form-control" name="ville_formation" id="villeFormation"  placeholder="ville*" type="text" value="" required="">
+          <input  class="form-control" name="entreprise_formation" id="entrepriseFormation"  placeholder="entreprise*" type="text" value="" required="">
+        </div>
+        <button class="btn btn-btn inscrire" (click)="saveFormation()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

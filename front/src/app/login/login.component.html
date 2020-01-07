@@ -1,0 +1,18 @@
+<div class="container ">
+  <div class="panel panel-primary spacer">
+    <div class="panel-heading">Veuillez s'authentifier svp!</div>
+    <div  class="panel-body">
+      <form #f="ngForm" (ngSubmit)="onLogin(f.value)">
+        <div class="form-group">
+            <label class="control-label"> Login  </label>
+            <input  type="text" name="username" ngModel class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="control-label"> Mot de passe  </label>
+            <input type="password" name="password" ngModel class="form-control" />
+        </div>
+          <button type="submit" class="btn btn-btn">Valider</button>
+      </form>
+    </div>
+  </div>
+</div>

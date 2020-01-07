@@ -1,0 +1,35 @@
+<div class ="container">
+  <div class="panel panel-primary spacer">
+    <div class="panel-heading"> Liste des formations disponibles</div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label>  Mot clé : </label>
+        <input class="spacer_left" type="text" [(ngModel)]="motCle"/>
+        <button class="btn btn-btn spacer_left" (click)="chercher()"> Chercher </button>
+      </div>
+      <table class="table table-striped">
+        <tr>
+          <th>Titre</th><th>Categorie</th><th>Refèrence</th><th>Description</th><th>Date de début</th><th>Durée</th><th>Tarif</th><th colspan="2" *ngIf="isAdmin()">Opérations</th>
+        </tr>
+        <tr *ngFor="let f of pageFormations?.content">
+          <td>{{f.name}}</td>
+          <td>{{f.categorie}}</td>
+          <td>{{f.reference}}</td>
+          <td>{{f.description}}</td>
+          <td>{{f.datedebut}}</td>
+          <td>{{f.duree}}</td>
+          <td>{{f.tarif}}</td>
+          <td> <a (click)="onEditFormation(f.id)" class="clickable" *ngIf="isAdmin()"> Edit</a></td>
+          <td> <a (click)="ondeleteFormation(f)" class="clickable" *ngIf="isAdmin()"> Delete</a></td>
+        </tr>
+      </table>
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li [ngClass]="{'active':i==currentPage}"  *ngFor="let p of pages; let i =index">
+            <a class="clickable" (click)="gotoPage(i)">{{i}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

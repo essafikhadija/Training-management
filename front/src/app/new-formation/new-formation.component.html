@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="panel panel-primary spacer" *ngIf="mode==1">
+    <div class="panel-heading">Nouvelle Formation</div>
+    <div class="panel-body">
+      <div >
+        <div class="form-group">
+          <label class="control-label">Titre : </label>
+          <input class="form-control" type="text" [(ngModel)]="formation.name"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Categorie : </label>
+          <input class="form-control" type="text" [(ngModel)]="formation.categorie"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Reference : </label>
+          <input class="form-control" type="text" [(ngModel)]="formation.reference"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Description : </label>
+          <input class="form-control" type="text" [(ngModel)]="formation.description"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Date de début  : </label>
+          <input class="form-control" type="date" [(ngModel)]="formation.datedebut"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Durée : </label>
+          <input class="form-control" type="text" [(ngModel)]="formation.duree"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Tarif: </label>
+          <input class="form-control" type="text" [(ngModel)]="formation.tarif"/>
+        </div>
+        <button class="btn btn-btn" (click)="saveFormation()">Save</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="mode==2">
+    <div class="container reglage">
+      <div class="panel panel-primary spacer">
+        <div class="panel-heading"> Ajout avec succès</div>
+        <div class="panel-body">
+          <p>Sujet de Formation : <strong>{{formation.name}}</strong></p>
+          <p>Categorie : <strong>{{formation.categorie}}</strong></p>
+          <p>Reference : <strong>{{formation.reference}}</strong></p>
+          <p>Description : <strong>{{formation.description}}</strong></p>
+          <p>Date de début : <strong>{{formation.datedebut}}</strong></p>
+          <p>Durée : <strong>{{formation.duree}}</strong></p>
+          <p>Tarif : <strong>{{formation.tarif}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

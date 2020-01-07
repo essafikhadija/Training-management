@@ -1,0 +1,150 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css');
+.image{
+  background-image: url('../src/images/img-background.jpg');
+  height:60em;
+  background-size:cover;
+  width:auto;
+  background-position:50% 50%;
+}
+.panel-primary{
+  background-color: transparent !important;
+}
+.spacer{
+
+  margin-right: 12px;
+  margin-top: 8px;
+}
+.spacer_left{
+
+  margin-left: 10px;
+}
+.clickable{
+  cursor: pointer;
+  color:#006A79;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #E6E7E8;
+  -webkit-background-size:cover;
+  background-size:cover;
+  background-position: center center;
+  height: 100vh;
+  font-family: regular, Verdana, Geneva, sans-serif;
+}
+.panel-primary>.panel-heading {
+  color: #fff;
+  background-color: #006A79;
+  border-color: #006A79;
+}
+.panel-primary {
+  border-color: #006A79;
+}
+.menu-area{
+  margin-right: 228px;
+}
+
+.menu-area li a {
+  text-decoration: none;
+}
+
+.menu-area li {
+  list-style-type: none;
+}
+
+.custom-padding{
+  padding-top: 25px;
+  padding-bottom: 16px;
+}
+
+nav {
+  position: relative;
+  width: calc(100% - 25px);
+  margin: 0 auto;
+  padding: 10px 0;
+  background: #006A79;
+  z-index: 1;
+  text-align: right;
+  padding-right: 2%;
+}
+.menu-area li {
+  display: inline-block;
+}
+
+.menu-area a {
+
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  padding: 0 25px;
+  font-size: 14px;
+  line-height: 30px;
+  position: relative;
+  z-index: 1;
+}
+.menu-area a:hover {
+  background: #E6E7E8;
+  color: #006A79;
+}
+
+.menu-area a:hover:after {
+  transform: translateY(-50%) rotate(-35deg);
+}
+
+nav:before {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-right: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  left: 0;
+}
+
+nav:after {
+  position: absolute;
+  content: '';
+  border-top: 10px solid #333;
+  border-left: 10px solid #333;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 100%;
+  right: 0;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: #fff;
+  background-color: #006A79;
+}
+.btn-btn{
+  color: #fff;
+  background-color: #006A79;
+}
+.btn-btn:hover {
+  color: #fff;
+  background-color:darkslategrey;
+}
+.container {
+  padding-left: 29px;
+}
+.footer{
+  text-align: center;
+}
+.inscrire{
+  margin-top: 10px;
+}
+.h3-inscrire{
+  color: #006A79;
+  font-size: 15px !important;
+}
+.reglage{
+  width: 1140px;
+  padding-left: 0px;
+}

@@ -1,0 +1,19 @@
+<div class="container ">
+  <div class="panel panel-primary spacer">
+    <div class="panel-heading">Veuillez s'authentifier svp!</div>
+    <div class="panel-body">
+      <form #f="ngForm" (ngSubmit)="onSaveContact(f.value)">
+        <div class="form-group">
+          <label class="control-label"> Login : </label>
+          <input #name="ngModel" class="form-control"  type="text"  ngModel name="name" required/>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> Mot de passe : </label>
+          <input class="form-control"  type="text"  ngModel name="categorie" required/>
+        </div>
+        <button [disabled]="!f.valid" type="submit" class="btn btn-chercher">Valider</button>
+      </form>
+
+    </div>
+  </div>
+</div>

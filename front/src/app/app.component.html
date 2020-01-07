@@ -1,0 +1,20 @@
+<div class="custom-padding">
+    <nav>
+      <ul class="menu-area"  *ngIf="isAuthenticated()">
+        <li><a routerLink="/accueil">Accueil</a></li>
+        <li><a routerLink="/formations">Formations</a></li>
+        <li><a routerLink="/new-formation" *ngIf="isAdmin()">Nouvelle Formation</a></li>
+        <li><a routerLink="/apropos">Apropos</a></li>
+        <li><a routerLink="/participant">S'inscrire</a></li>
+        <li><a class="btn" (click)="logOut()">LogOut</a></li>
+        <li><a routerLink="/login" class="nav-link" *ngIf="!isAuthenticated()">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+
+<router-outlet>
+
+</router-outlet>
+
+<app-footer></app-footer>
+
